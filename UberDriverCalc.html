@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Cost of Saving</title>
+    
+    <meta name="viewpoint" content="width=device-width", intial="1.0">
+    
+    <link rel="stylesheet" href="UberDriverCalc.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Filson+Pro">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script type="text/javascript" src="UberDriverCalc.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="UberDriverCalcbody">
+    <div class="TCO-main-content">
+        <!-- Header -->
+        <h1 id="howyouSave">Your Savings</h1>
+        <div class="input-chart-container">
+            <div class="input-container">
+                    <h2 class="totalCostHeader">
+                        EV vs ICE Cost
+                        <!-- <div class="totalCost-group">
+                            <img src="./images/question-mark.png" alt="Question Mark Tooltip" class="totalCostIcon">
+                            <span class="totalCostToolTip">Total cost of ownership (TCO) includes the purchase price of a particular asset, plus operating costs, over the asset's life span.</span>
+                        </div> -->
+                    </h2>
+                <!-- Inputs -->
+                <div class="calc-savings">
+                    <hr id="break">
+                    <!-- Term Dropdown -->
+                    <label for="term-length">Choose a Term</label>
+                    <select name="term-length" class="dropdown term-length">
+                        <option value="45mo">45 months</option>
+                        <option value="56mo">56 months</option>
+                        <option value="67mo">67 months</option>
+                    </select>
+                    <!-- Weekly Mileage -->
+                    <div class="inputHeader-container">
+                        <h3 class="inputHeader">Weekly Mileage (mi)</h3>
+                    </div>
+                    <div class="input-group">
+                        <div class="range-wrap">
+                            <input type="range" class="range" min="100" max="2500" value="1200" step="1" id="milesRange" name="milesRange">
+                        </div>
+                        <input type="text" class="number" id="milesInput" name="milesInput" value="1200" readonly>
+                    </div>
+                    <!-- Uber Weekly Mileage -->
+                    <div class="inputHeader-container">
+                        <h3 class="inputHeader">Uber Weekly Mileage (mi)</h3>
+                    </div>
+                    <div class="input-group">
+                        <div class="range-wrap">
+                            <input type="range" class="range" min="100" max="2500" value="1200" step="1" id="uberMilesRange" name="uberMilesRange">
+                        </div>
+                        <input type="text" class="number" id="uberMilesInput" name="uberMilesInput" value="1200" readonly>
+                    </div>
+                    <!-- Cost of Gasoline -->
+                    <div class="inputHeader-container">
+                        <h3 class="inputHeader">Cost of Gasoline (USD)</h3>
+                    </div>
+                    <div class="input-group">
+                        <div class="range-wrap">
+                            <input type="range" class="range" min=".05" max="10.00" value="3.55" step="0.05" id="gasRange" name="gasRange" style="--c: rgb(205,92,92)">
+                        </div>
+                        <input type="text" class="number" id="gasInput" name="gasInput" value="3.55" readonly>
+                    </div>
+                    <!-- Cost of Charging -->
+                    <div class="inputHeader-container">
+                        <h3 class="inputHeader">Cost of Charging (&#162; per kwh)</h3>
+                    </div>
+                    <div class="input-group">
+                        <div class="range-wrap">
+                            <input type="range" class="range" min=".05" max="30.00" value="15.00" step="0.01" id="chargingRange" name="chargingRange" style="--c: rgb(205,92,92)">
+                        </div>
+                        <input type="text" class="number" id="chargingInput" name="chargingInput" value="15.00" readonly>
+                    </div>
+                    <!-- City Dropdown -->
+                    <label for="city">What City do you Drive in?</label>
+                    <select name="city" class="dropdown city">
+                        <option value="austin">Austin</option>
+                        <option value="Los Angeles">Los Angeles</option>
+                        <option value="Dallas">Dallas</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Comparison Chart -->
+            <div class="chart-container"> 
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+        <!-- Bottom Bar -->
+        <div class="container space-around bottom-bar">
+            <div class="first-three-columns">
+                <div class="bottom-column first-column">
+                    <h4 id="ownershipCost" class="saving-header"></h4>
+                    <p id="ownershipCostTitle" class="saving-paragraph">Monthly Ownership Cost</p>
+                </div>
+                <div class="between"></div>
+                <div class="bottom-column second-column">
+                    <h4 id="savedMonthly" class="saving-header"></h4>
+                    <p id="savedMonthlyTitle" class="saving-paragraph">Percentage Saved Monthly</p>
+                </div>
+                <div class="between"></div>
+                <div class="bottom-column third-column">
+                    <h4 id="monthlySavings" class="saving-header"></h4>
+                    <p id="monthlySavingsTitle" class="saving-paragraph">Monthly Savings</p>
+                </div>
+            </div>
+            <div class="last-two-columns">
+                <div class="between third-between"></div>
+                <div class="bottom-column fourth-column">
+                    <h4 id="yearlySavings" class="saving-header"></h4>
+                    <p id="yearlySavingsTitle" class="saving-paragraph">Yearly Savings</p>
+                </div>
+                <div class="between fourth-between"></div>
+                <div class="bottom-column fifth-column">
+                    <h4 id="co2Offset" class="saving-header"></h4>
+                    <p id="co2OffsetTitle" class="saving-paragraph">CO<sub>2</sub> Monthly Savings</p>
+                    <!-- <div class="co2-group">
+                        <img src="./images/question-mark.png" alt="Question Mark ToolTip" class="co2OffsetIcon">
+                        <span class="co2OffsetToolTip">Estimated carbon (CO2) emissions savings measured in metric tons that may result when you switch from a gas or diesel-powered vehicle to an electric vehicle.</span>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- Disclaimer -->
+        <!-- <div class="elementor-widget-container">
+            <p class="disclaimer">
+                [1] Advertised lease payment for southern California, May 2023. Actual rate may vary.
+            </p>
+            <p class="disclaimer">
+                [2] Gas Overage rate is $0.25 per mile over 1,250 (the average monthly mileage for a 15,000 mile per year lease). EV Overage rate is $0.12 per mile over 1,800 miles.
+            </p>
+            <p class="disclaimer">
+                [3]  Fuel estimate for BMW 330i is based on 30 combined MPG. Charging estimate are based on 4.0 mi/kWh and $0.25 charging costs. Actual rates may vary.
+            </p>
+            <p class="disclaimer">
+                [4] Average maintenance cost for a gas vehicle is $0.10 per mile. Average cost maintenance cost for EVs is $0.06 per mile.
+            </p>
+            <p class="disclaimer">
+                [5] Carbon Dioxide Savings is based off the zipcode of 90001-96162 . Actual rate may vary.
+            </p>
+        </div> -->
+    </div>
+</body>
+</html>

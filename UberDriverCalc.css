@@ -1,0 +1,1129 @@
+.UberDriverCalcbody {
+    display: flex;
+    color: white;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 auto;
+    margin-top: 4rem;
+    background-color: #282525;
+    font-family: 'Filson-Pro', sans-serif;
+}
+#howyouSave {
+    font-size: 4rem;
+    font-weight: 700;
+}
+#break {
+    width: 100%;
+}
+
+.calc-savings {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    flex-direction: column;
+}
+.dropdown {
+    color: #ffff;
+    background-color: #282525;
+    border: 1px solid #ffff;
+
+}
+.input-group {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0 0 0;
+}
+
+.range {
+ width: 4em;   
+}
+.number {
+    width: 3em;
+    height: 1.1em;
+    color: #ffff;
+    text-align: center;
+    background-color: #282525;
+    border-radius: 2rem;
+    border: 1px solid #ffff;
+    font-size: 3rem;
+}
+
+#myChart {
+    width: 400px;
+    height: 400px;
+}
+
+
+/* 
+.TCOhtml, .TCObody {
+    overflow-x: hidden !important;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center; 
+    margin: 0 auto;
+    background-color: #282525;
+    font-family: 'Filson-Pro', sans-serif;
+}
+.TCO-main-content {
+    background-color: #282525;
+    flex-direction: column;
+}
+#HowyouSave {  
+    color: white;
+    font-family: 'Filson-Pro', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;        
+    text-align: center;
+    margin-top: 0.5rem;
+}
+.input-chart-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+.totalCost-group {
+    position: relative;
+}
+.totalCostIcon:hover + .totalCostToolTip {
+    display: inline; 
+}
+
+#myChart {
+    width: 600px;
+    height: 400px;
+}
+.range-wrap:hover .bubble {
+    display: block;
+  }
+.range-wrap {
+    position: relative;
+    width: 100%;
+}
+input[type="range" i]::-webkit-slider-thumb{
+    height: var(--s);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: 0 0 0 var(--_b,var(--l)) inset var(--_c);
+    border-image: linear-gradient(90deg,var(--_c) 50%,#ababab 0) 0 1/calc(50% - var(--l)/2) 100vw/0 calc(100vw + var(--g));
+    -webkit-appearance: none;
+    appearance: none;
+    transition: .3s;
+
+}
+input[type="range" i]::-moz-range-thumb{
+        width: 1.5rem;
+        --s: 1.5rem;
+        background: var(--_l);
+        height: var(--s);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        box-shadow: 0 0 0 var(--_b,var(--l)) inset var(--_c);
+        border-image: linear-gradient(90deg,var(--_c) 50%,#ababab 0) 0 1/calc(50% - var(--l)/2) 100vw/0 calc(100vw + var(--g));
+        -webkit-appearance: none;
+        appearance: none;
+        transition: 0.3s;
+}
+.range::-moz-range-thumb {
+    border-image: linear-gradient(90deg,var(--_c) 50%,#ababab 0) 0 1/calc(50% - var(--l)/2) 100vw/0 calc(100vw + var(--g));
+}
+.range::-moz-range-track {
+    background: linear-gradient(to left, var(--g) var(--p, 50%), #282525 var(--p, 0%));    
+}
+.range {
+    appearance: none;
+    background-color: #282525;
+}
+.co2-group {
+    position: relative;
+    display: inline-block;
+}      
+.co2OffsetIcon:hover + .co2OffsetToolTip {
+    display: inline-block;      
+}
+
+
+
+
+@media screen and (min-width: 1441px) {
+    .calc-savings {
+        display: flex;
+        margin: 0 auto;
+        width: 100%;
+        flex-direction: column;
+    }
+    .totalCostHeader {
+        display: flex;
+        color: white;
+        font-size: 2.8rem;
+        font-weight: bold;
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+    }
+
+    .totalCostIcon {
+        position: relative;
+        display: flex;
+        width: 3rem;        
+        transform: translateY(0%);
+        margin-left: 0.5rem;
+
+      }
+      
+      .totalCost-group  .totalCostToolTip{
+        display: none;
+        background-color: white;
+        color: black;
+        text-align: left;
+        font-size: 0.9rem;
+        width: 8rem;
+        border-radius: 0.5rem;
+        padding: 0.3rem;
+        position: absolute;
+        z-index: 1;
+        top: -50%;
+        left: 100%;
+    }
+    .chart-container {
+
+        flex: auto;
+        max-width: 600px;
+        max-height: 400px;
+        margin: 5rem auto 4rem auto;
+    }
+    #myChart {
+        width: 600px !important;
+        height: 400px !important;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .input-container { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1; 
+        margin: 0rem 3rem 0 0;
+    } 
+    .inputHeader-container {
+        display: flex;
+        justify-content: left;
+        margin: 3rem 0 0 0;
+    }
+    
+    .inputHeader {
+        color: white;
+        font-size: 2.2rem;
+    }
+    .input-group {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1rem 0 0 0;
+    }
+    .number {
+        display: flex;
+        flex-direction: row;
+        color: #ffff;
+        background-color: #282525;
+        width: 4rem;
+        height: 2rem;
+        text-align: center;
+        border-radius: 2rem;
+        border: 1px solid #ffff;
+        font-size: 1.5rem;
+        margin: 1rem 0 0 0.5rem;
+    }
+    .range {
+        width: 100%;
+        --c: rgb(0, 104, 187);
+        --g: 0.2rem;
+        --b: 0;
+        --l: 0.2rem;
+        --s: 2rem;
+        --_c: color-mix(in srgb, var(--c), #000 var(--p,0%));
+        appearance: none;
+        cursor: pointer;
+        overflow: hidden;
+        margin: 1rem auto 4rem 0;
+        background-color: initial;
+    }
+
+    .bottom-bar {
+        background-color: #0678f7;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        margin: 0;
+        border-radius: 1rem;
+
+    }
+    .bottom-column {
+        display: inline-block;
+        flex-direction: row;
+        flex: 1;
+        text-align: center;
+        padding: 0;
+        width: 20rem;
+        margin: 1rem;
+        border-right: none;
+
+    }
+    .last-column {
+        border: none;
+
+    }
+    .first-three-columns {
+        display: flex;
+    }
+    .last-two-columns {
+        display: flex;
+    }
+    .between {
+        display: flex;
+        background-color: black;
+        width: 0.1rem;
+        margin: 1.4rem 0.6rem;
+    }
+
+    .saving-header {
+        margin: 0;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 0.7rem;
+    }
+    .saving-paragraph {
+        display: inline-block;
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    .co2OffsetIcon {
+        display: inline-block;
+        margin: 0;
+        width: 1.6rem;
+        vertical-align: middle;
+        transform: translateY(-10%);
+      }
+      .co2-group  .co2OffsetToolTip{
+        display: none;
+        background-color: white;
+        color: black;
+        text-align: left;
+        font-size: 0.8rem;
+        width: 8rem;
+        border-radius: 0.5rem;
+        padding: 0.3rem;
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: -250%;
+    }
+
+    .elementor-widget-container {
+        color: #8888;
+        margin: 3rem 25%;
+        display: flex;
+        font-size: 1rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        line-height: 1.8rem;
+        
+    }
+    .disclaimer {
+        display: flex;
+        margin: 0.5rem 0;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 1440px) {
+
+    .calc-savings {
+        display: flex;
+        margin: 0 auto;
+        width: 100%;
+        flex-direction: column;
+    }
+    .totalCostHeader {
+        display: flex;
+        color: white;
+        font-size: 2.8rem;
+        font-weight: bold;
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+    }
+    .totalCostIcon {
+        position: relative;
+        display: flex;
+        width: 3rem;        
+        transform: translateY(0%);
+        margin-left: 0.5rem;
+      }  
+      .totalCost-group  .totalCostToolTip{
+        display: none;
+        background-color: white;
+        color: black;
+        text-align: left;
+        font-size: 0.9rem;
+        width: 8rem;
+        border-radius: 0.5rem;
+        padding: 0.3rem;
+        position: absolute;
+        z-index: 1;
+        top: -50%;
+        left: 100%;
+    }
+    .chart-container {
+        flex: auto;
+        max-width: 600px;
+        margin: 5rem auto 4rem auto;
+    }
+    #myChart {
+        width: 600px !important;
+        height: 400px !important;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .input-container { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1; 
+        margin: 0rem 3rem 0 0;
+    } 
+    .inputHeader-container {
+        display: flex;
+        justify-content: left;
+        margin: 3rem 0 0 0;
+    }
+    
+    .inputHeader {
+        color: white;
+        font-size: 2.2rem;
+    }
+    .input-group {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1rem 0 0 0;
+    }
+    .number {
+        display: flex;
+        flex-direction: row;
+        color: #ffff;
+        background-color: #282525;
+        width: 4rem;
+        height: 2rem;
+        text-align: center;
+        border-radius: 2rem;
+        border: 1px solid #ffff;
+        font-size: 1.5rem;
+        margin: 1rem 0 0 0.5rem;
+    }
+    .range {
+        width: 100%;
+        --c: rgb(0, 104, 187);
+        --g: 0.2rem;
+        --b: 0;
+        --l: 0.2rem;
+        --s: 2rem;
+        --_c: color-mix(in srgb, var(--c), #000 var(--p,0%));
+        appearance: none;
+        cursor: pointer;
+        overflow: hidden;
+        margin: 1rem auto 4rem 0;
+        background-color: initial;
+    }
+    .bubble {
+        display: none;
+        background-color: white;
+        position: absolute;
+        width: 2.2rem; 
+        padding-top: 0.2rem;
+        height: 1.5rem;
+        text-align: center; 
+        color: black; 
+        font-size: 1rem;
+        border-radius: 0.4rem;
+        bottom: 90%;
+        margin: auto;
+        transform: translateX(-50%);
+    }
+      .bubble::after {
+        content: "";
+        position: absolute; 
+        width: 0;
+        height: 0;
+        border-top: 0.3rem solid white;
+        border-left: 0.2rem solid transparent;
+        border-right: 0.2rem solid transparent;
+        top: 200%;
+        left: 50%;
+        margin-left: -.2rem;
+        margin-top: -1.5rem;
+      }
+    .bottom-bar {
+        background-color: #0678f7;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        margin: 0;
+        border-radius: 1rem;
+
+    }
+    .bottom-column {
+        display: inline-block;
+        flex-direction: row;
+        flex: 1;
+        text-align: center;
+        padding: 0;
+        width: 20rem;
+        margin: 1rem;
+        border-right: none;
+
+    }
+    .first-three-columns {
+        display: flex;
+    }
+    .last-two-columns {
+        display: flex;
+    }
+    .between {
+        display: flex;
+        background-color: black;
+        width: 0.1rem;
+        margin: 1.4rem 0.6rem;
+    }
+
+    .saving-header {
+        margin: 0;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 0.7rem;
+    }
+    .saving-paragraph {
+        display: inline-block;
+        margin: 0;
+        font-size: 1.5rem;
+    }
+    .co2OffsetIcon {
+        display: inline-block;
+        margin: 0;
+        width: 1.6rem;
+        vertical-align: middle;
+        transform: translateY(-10%);
+      }
+      .co2-group  .co2OffsetToolTip{
+        display: none;
+        background-color: white;
+        color: black;
+        text-align: left;
+        font-size: 0.8rem;
+        width: 8rem;
+        border-radius: 0.5rem;
+        padding: 0.3rem;
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: -250%;
+    }
+    .elementor-widget-container {
+        color: #8888;
+        margin: 3rem 25%;
+        display: flex;
+        font-size: 1rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        line-height: 1.8rem;
+    }
+    .disclaimer {
+        display: flex;
+        margin: 0.5rem 0;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+}
+
+
+
+
+
+@media screen and (max-width: 1279px) {
+    .calc-savings {
+        width: 100%;
+    }     
+    #myChart {
+        width: 500px !important;
+        height: 400px !important;
+        margin: 0 0 0 10rem;
+    }
+    .input-container { 
+        margin: 0 -7rem 0 0;
+    } 
+    .number {
+        color: #ffff;
+        background-color: #282525;
+        border: 1px solid #ffff;
+        flex-direction: row;
+        width: 4rem;
+    }
+    .container {
+        width: auto;
+        justify-content: center;
+    }
+    .bottom-bar {
+        width: 100% !important;
+        padding: 0 !important;
+
+    }
+    .bottom-column {
+        display: inline;
+        flex-wrap: wrap;
+        height: auto;
+        max-height: 10rem;
+        margin: 1rem 0;
+
+    }
+    .first-three-columns {
+        flex-wrap: wrap;
+    }
+    .last-two-columns {
+        flex-wrap: wrap;
+    }
+    .between {
+        margin: 1.4rem 0;
+    }
+
+    .saving-header {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .saving-paragraph {
+        text-align: center;
+        font-size: 1.3rem;
+    } 
+}
+
+
+
+@media screen and (max-width: 980px) {
+
+    .TCO-main-content {
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    .input-chart-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .calc-savings {
+        width: 100%;
+        padding: 1rem 0;
+        margin: auto;
+    }
+    
+    .totalCostHeader { 
+        text-align: center;
+        margin: 3rem auto 0rem auto;
+
+    }
+    .totalCostIcon {
+        width: 2.8rem;        
+        transform: translateY(0%);
+        margin-left: 0.3rem;
+
+      }
+      .totalCost-group  .totalCostToolTip{
+        top: -50%;
+        left: 100%;
+    }     
+    .chart-container {
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0 0 1rem 0;
+        margin: 0 auto;
+    }    
+    #myChart {
+        width: 500px !important;
+        height: 410px !important;
+        position: relative;
+        margin: 0 auto;
+    }
+    .input-container { 
+        width: 100%;
+        max-width: 600px;
+        box-sizing: border-box;
+        margin: 1rem 0 4rem 0;
+    }
+    #break {
+        width: 100%;
+    }
+    .inputHeader-container {
+        justify-content: center;
+        margin: 2rem 0 0 0;
+    }
+    .input-group {
+        margin: 2rem 0;
+    }
+
+    
+    .number {
+        border-radius: 2rem;
+        margin: 0 0 0 0.5rem;
+    }
+    .range {
+        margin: 0 auto 0 0;
+    }
+      .bubble {
+        width: 2.3rem; 
+        padding-top: 0;
+        bottom: 120%;
+    }
+    .bottom-bar {
+        background-color: #282525;
+        flex-direction: column;
+        height: 6rem;
+        margin: 7rem auto 5rem auto;
+    }
+    
+    .bottom-column {
+        flex-direction: column;
+        width: 100%;
+    }
+    .first-three-columns {
+        flex-direction: row;
+        justify-content: center;
+        background-color: #0678f7;
+        margin: 0rem;
+        width: 100%;
+        border-radius: 1rem;
+        flex-grow: 1;
+    }
+    .third-column {
+        border: none;
+    }
+    .last-two-columns {
+        flex-direction: row;
+        justify-content: center;
+        background-color: #0678f7;    
+        margin: 1rem auto;
+        width: 67%;
+        border-radius: 1rem;
+        flex-grow: 1;
+    }
+    .between {
+        margin: 1.5rem 0;
+    }
+    .third-between {
+        display: none;
+    }
+
+    .saving-header {
+        margin: 1rem;
+        margin-bottom: 0.4rem;
+    }
+    .saving-paragraph {
+        margin: 0 auto;
+        flex-wrap: wrap;
+        font-size: 1.5rem;
+    }
+    .co2OffsetIcon {
+        width: 1.2rem;
+     
+      }
+      .co2-group  .co2OffsetToolTip{
+        top: 100%;
+        left: -300%;
+    }
+    .elementor-widget-container {
+        margin: 6rem 17%;
+    }
+
+}
+@media screen and (max-width: 768px) {
+
+    #HowyouSave {  
+        font-size: 3.5rem;
+    }
+   .calc-savings {
+        width: 90%;
+        padding: 0;
+    }
+    
+    .totalCostHeader { 
+        font-size: 2.3rem;
+    } 
+    .totalCostIcon {
+        width: 2.5rem;        
+        transform: translateY(-5%);
+      }
+      
+      .totalCost-group  .totalCostToolTip{
+        top: 80%;
+        left: -100%;
+    }
+    .chart-container {
+        padding: 0;
+    }          
+    #myChart {  
+        width: 440px !important;
+        height: 410px !important;
+    }
+
+    .input-container { 
+        width: 90%;
+    }
+    #break {
+        margin-bottom: 2.5rem;
+
+    }
+    .inputHeader {
+        margin: 0;
+        font-size: 1.8rem;     
+    }
+    .input-group {
+        width: 100%;
+        align-items: center;
+        margin: 2rem 0;
+    }
+
+    
+    .number {
+        height: 1.7rem;
+        font-size: 1.4rem;
+    }
+    .range {
+        --s: 1.7rem;
+    }
+      .bubble {
+        bottom: 120%;
+        transform: translateX(-50%);
+    }
+    .bottom-bar {
+        align-items: center;
+        width: auto;
+        margin: 8rem 0 0 0;
+    }
+    .bottom-column {
+        max-height: 10rem;
+    }
+    
+    .first-three-columns {
+        flex: auto;
+        max-height: 12rem;
+    }
+    .last-two-columns {
+        flex: auto;  
+        margin: 1rem auto;
+        max-height: 12rem;
+    }
+    .between {
+        margin: 1.3rem 0.2rem;
+    }
+
+    .saving-header {
+        justify-content: center;
+        margin: .5rem 0.4rem;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .saving-paragraph {
+        display: inline;
+        flex-wrap: wrap;
+        margin: 1rem 0;
+        font-size: 0.9em;
+        
+    }
+    .elementor-widget-container {
+        margin: 6rem 17%;           
+    }
+}
+
+
+@media screen and (max-width: 436px) {
+    .TCO-main-content {
+        margin: auto;
+    }
+    
+    #HowyouSave {  
+        font-size: 3rem;
+    }
+    .calc-savings {
+        width: 100%;
+    }
+
+    .totalCostHeader { 
+        align-items: center;
+        font-size: 2rem;
+        margin: 2rem auto 0 auto;
+
+    } 
+    .totalCostIcon {
+        width: 1.5rem;        
+        transform: translateY(-10%);
+        margin-left: 0.2rem;
+
+      }
+      
+      .totalCost-group  .totalCostToolTip{
+        font-size: 0.8rem;
+        width: 7rem;
+        border-radius: 0.5rem;
+        padding: 0.3rem;
+        top: 80%;
+        left: -100%;
+    }
+    .chart-container {
+        padding: 0 0 1rem 0;
+    }
+    
+    #myChart {
+        width: 350px !important;
+        height: 400px !important;
+        align-items: center;
+    }
+    
+    .input-container { 
+        width: 80%;
+        margin: 1rem 0 5rem 0;
+    }
+    #break {
+        margin-bottom: 2.5rem;
+    }
+    
+    .input-group {
+        margin: 2rem 0 0 0;
+    }
+
+    .inputHeader {
+        font-size: 1.7rem;
+    }
+    .range {
+        margin: 0 0 0 0;
+    }
+      .bubble {
+        height: 1.3rem; 
+        font-size: 1rem;
+    }
+      .bubble::after {
+        margin-top: -1.3rem;
+      }
+    .bottom-bar {
+        max-width: 40rem;
+        margin: 6rem 0;
+    }
+    
+    .bottom-column {
+        width: 15rem;
+
+    }
+    .last-two-columns {
+        flex-grow: 1;
+    }
+    .between {
+
+        width: 0.1rem;
+        margin: 1.3rem 0.2rem;
+    }
+    .third-between {
+        display: none;
+    }
+    
+    .saving-header {
+        margin: 0;
+        font-size: 4.5vw;
+    }
+    .saving-paragraph {
+        margin: 0 auto;
+        font-size: 2.5vw;
+
+    }
+    .co2OffsetIcon {
+        margin: 0;
+        transform: translateY(5%);   
+      }
+      .co2-group  .co2OffsetToolTip{
+        top: 100%;
+        left: -350%;
+    }
+    .elementor-widget-container {
+        margin: 0 17%;
+    } 
+}
+@media screen and (max-width: 380px) {
+
+    html, body {
+        justify-content: center;
+    }
+    
+    .TCO-main-content {
+        flex-wrap: wrap;
+    }
+    
+    #HowyouSave {  
+        font-size: 2.5rem;
+    }
+
+    .totalCostHeader { 
+        font-size: 1.6rem;
+    } 
+    .totalCost-group {
+        position: relative;
+    }
+
+    .totalCostIcon {
+        width: 1.8rem;        
+        transform: translateY(-5%);
+        margin-left: 0.2rem;
+      }
+      
+      .totalCost-group  .totalCostToolTip{
+        top: 100%;
+        left: -100%;
+    }
+
+    .input-container { 
+        width: 80%;
+        margin: 1rem 0 4rem 0;
+    }
+        
+    #myChart {  
+        width: 300px !important;
+        height: 400px !important;
+        position: relative;
+        margin: 0 auto;
+    }
+    .input-group {
+        width: 100%;
+        margin: 2rem 0 0 0;
+    }
+    .inputHeader {
+        font-size: 1.6rem;
+    }
+    
+    .number {
+        width: 4rem;
+        height: 1.7rem;
+        border-radius: 2rem;
+        font-size: 1.2rem;
+        margin: 0 0 0 0.5rem;
+
+    }
+    
+    .range {
+        margin: 0 13rem 0 0;
+    }
+
+    .bubble {
+        width: 2.2rem; 
+        padding-top: 0rem;
+        height: 1.3rem;
+        font-size: 0.9rem;
+        bottom: 115%;
+        transform: translateX(-50%);
+    }
+      .bubble::after {
+        margin-left: -.2rem;
+        margin-top: -1.4rem;
+      }
+    
+    .bottom-column {
+        height: 4rem;
+        max-height: 10rem;
+    }
+    .between {
+        margin: 1rem 0.6rem;
+    }
+    .saving-header {
+        margin: 0 1rem;
+        font-size: 1.6rem;
+        margin-bottom: 0.1rem;
+    }
+    .saving-paragraph {
+        font-size: 2.5vw;
+    }
+      .co2-group  .co2OffsetToolTip{
+        top: 100%;
+        left: -200%;
+    }
+    .elementor-widget-container {
+        margin: 0 15%;
+    }
+}
+@media screen and (max-width: 320px) {
+    .totalCostIcon {
+        width: 1.7rem;        
+        margin-left: 0rem;
+      }
+      
+      .totalCost-group  .totalCostToolTip{
+        display: none;
+        background-color: white;
+        color: black;
+        text-align: left;
+        font-size: 0.8rem;
+        width: 7rem;
+        border-radius: 0.5rem;
+        padding: 0.3rem;
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: -200%;
+    }
+        
+    #myChart {  
+        width: 80vw !important;
+        height: 40vh !important;
+        position: relative;
+        margin: 0 auto;
+    }
+    
+    .range {
+        margin: 0 8rem 0 0;
+    }
+      .bubble::after {
+        margin-top: -1.3rem;
+      }
+    .bottom-bar {
+        margin: 6rem 0;
+    }
+    
+    .bottom-column {
+        height: auto;
+        border-right: none;
+    }
+    .first-three-columns {
+        margin: 0 auto;
+    }
+    .saving-paragraph {
+        font-size: 0.8rem;
+    }
+    .elementor-widget-container {
+        margin: 1rem 17%;
+        font-size: 0.8rem;     
+    }
+} */
